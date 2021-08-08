@@ -135,7 +135,7 @@ function onEscKeyPress(event) {
  
 function onArrowLeftPress(event) {
   if (event.code === 'ArrowLeft') {
-    const sources = itemsDefault.map(({ original }) => original)
+    const sources = galleryItems.map(({ original }) => original)
     let indexOfCurrentImg = sources.indexOf(modalImage.src)
 
     if (indexOfCurrentImg === 0) {
@@ -150,7 +150,7 @@ function onArrowLeftPress(event) {
 
 function onArrowRightPress(event) {
   if (event.code === 'ArrowRight') {
-    const sources = itemsDefault.map(({ original }) => original)
+    const sources = galleryItems.map(({ original }) => original)
     let indexOfCurrentImg = sources.indexOf(modalImage.src)
 
     if (indexOfCurrentImg + 1 > sources.length - 1) {
