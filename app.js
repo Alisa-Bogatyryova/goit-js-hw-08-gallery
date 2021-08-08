@@ -85,7 +85,6 @@ const listEl = galleryItems.map(({ preview, original, description }) => { return
 }).join(" ")
 
 list.insertAdjacentHTML('beforeend', listEl)
-
 //Реализация делегирования на галерее ul.js-gallery и получение url большого изображения. 
 //Открытие модального окна по клику на элементе галереи.
 //Подмена значения атрибута src элемента img.lightbox__image.
@@ -107,9 +106,7 @@ function onClickOpenModal(event) {
 modalCloseBtn.addEventListener('click', onCloseModal)
 function onCloseModal(event) {
   modal.classList.remove('is-open')
-
    //Очистка значения атрибута src элемента img.lightbox__image.
-  
   modalImage.src = '';
   modalImage.alt = '';
 
@@ -126,13 +123,13 @@ function onOverlayClick(event) {
 }
 
 // Закрытие модального окна по нажатию клавиши ESC.
-
 function onEscKeyPress(event) {
   if (event.code === 'Escape') {
     onCloseModal()
   }
 }
  
+//ArrowLeft
 function onArrowLeftPress(event) {
   if (event.code === 'ArrowLeft') {
     const sources = galleryItems.map(({ original }) => original)
@@ -147,7 +144,6 @@ function onArrowLeftPress(event) {
 }
 
 //ArrowRight
-
 function onArrowRightPress(event) {
   if (event.code === 'ArrowRight') {
     const sources = galleryItems.map(({ original }) => original)
